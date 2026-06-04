@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação do Campeonato - Atualizado</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .fase-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .grupos-flex {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .grupo-box {
+            flex: 1;
+            min-width: 300px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: #fff;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Zonas de Classificação */
+        .zona-verde {
+            background-color: #d4edda !important;
+            color: #155724;
+            font-weight: bold;
+        }
+        .zona-rebaixamento {
+            background-color: #f8d7da !important;
+            color: #721c24;
+        }
+        .posicao {
+            width: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Tabela do Campeonato</h1>
+    <hr>
+
+    <!-- ================= FASE 1 ================= -->
+    <div class="fase-container">
+        <h2>1ª FASE DE GRUPOS (12 Times)</h2>
+        <p style="text-align: center; color: #666;">Os 3 primeiros de cada grupo avançam para a Fase 2. O último de cada grupo é rebaixado.</p>
+        
+        <div class="grupos-flex">
+            <!-- GRUPO A -->
+            <div class="grupo-box">
+                <h3>Grupo A</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="posicao">Pos</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 1º ao 3º: Zona Verde (Passam de fase) -->
+                        <tr class="zona-verde"><td class="posicao">1º</td><td><a href="https://www.flamengo.com.br" target="_blank">Atletico Iguatama</a></td></tr>
+                        <tr class="zona-verde"><td class="posicao">2º</td><td><a href="https://www.palmeiras.com.br" target="_blank">Fino Ec</a></td></tr>
+                        <tr class="zona-verde"><td class="posicao">3º</td><td><a href="https://www.saopaulofc.net" target="_blank">Mitoxx Sc</a></td></tr>
+                        <!-- Meio da tabela -->
+                        <tr><td class="posicao">4º</td><td><a href="https://www.gremio.net" target="_blank">Associacao DFC</a></td></tr>
+                        <tr><td class="posicao">5º</td><td><a href="https://www.cruzeiro.com.br" target="_blank">CA EDSON QS</a></td></tr>
+                        <!-- Último: Rebaixado -->
+                        <tr class="zona-rebaixamento"><td class="posicao">6º</td><td><a href="https://www.vasco.com.br" target="_blank">Aura Fc</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- GRUPO B -->
+            <div class="grupo-box">
+                <h3>Grupo B</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="posicao">Pos</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 1º ao 3º: Zona Verde (Passam de fase) -->
+                        <tr class="zona-verde"><td class="posicao">1º</td><td><a href="https://www.atletico.com.br" target="_blank">VilaNovense FC</a></td></tr>
+                        <tr class="zona-verde"><td class="posicao">2º</td><td><a href="https://www.botafogo.com.br" target="_blank">Mato-Grense</a></td></tr>
+                        <tr class="zona-verde"><td class="posicao">3º</td><td><a href="https://www.fluminense.com.br" target="_blank">Brasil SC</a></td></tr>
+                        <!-- Meio da tabela -->
+                        <tr><td class="posicao">4º</td><td><a href="https://www.internacional.com.br" target="_blank">CA Rolândiá</a></td></tr>
+                        <tr><td class="posicao">5º</td><td><a href="https://www.corinthians.com.br" target="_blank">MGEC</a></td></tr>
+                        <!-- Último: Rebaixado -->
+                        <tr class="zona-rebaixamento"><td class="posicao">6º</td><td><a href="https://www.santosfc.com.br" target="_blank">Cruzeiro do Sul</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= FASE 2 ================= -->
+    <div class="fase-container">
+        <h2>2ª FASE DE GRUPOS (6 Classificados)</h2>
+        <p style="text-align: center; color: #666;">Os 6 times sobreviventes foram divididos em 2 novos grupos. O 1º colocado de cada grupo vai para a Final (Zona Verde).</p>
+        
+        <div class="grupos-flex">
+            <!-- GRUPO C (Fase 2) -->
+            <div class="grupo-box">
+                <h3>Grupo C</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="posicao">Pos</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 1º Lugar: Classifica para a final -->
+                        <tr class="zona-verde"><td class="posicao">1º</td><td><a href="https://www.flamengo.com.br" target="_blank">A Definir</a> (Finalista)</td></tr>
+                        <!-- Outros participantes -->
+                        <tr><td class="posicao">2º</td><td><a href="https://www.botafogo.com.br" target="_blank">A Definir</a></td></tr>
+                        <tr><td class="posicao">3º</td><td><a href="https://www.saopaulofc.net" target="_blank">A Definir</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- GRUPO D (Fase 2) -->
+            <div class="grupo-box">
+                <h3>Grupo D</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="posicao">Pos</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 1º Lugar: Classifica para a final -->
+                        <tr class="zona-verde"><td class="posicao">1º</td><td><a href="https://www.atletico.com.br" target="_blank">A Definir</a> (Finalista)</td></tr>
+                        <!-- Outros participantes -->
+                        <tr><td class="posicao">2º</td><td><a href="https://www.palmeiras.com.br" target="_blank">A Definir</a></td></tr>
+                        <tr><td class="posicao">3º</td><td><a href="https://www.fluminense.com.br" target="_blank">A Definir</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
