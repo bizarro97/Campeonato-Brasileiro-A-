@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela do Campeonato - Completa com Legenda</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 15px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #111;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .fase-container {
+            background: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .fase-titulo {
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 2px solid #333;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+        .grupos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 30px;
+        }
+        .grupo-titulo {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 10px 8px;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+        }
+        th {
+            color: #7f8c8d;
+            font-weight: 400;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+        .col-classificacao {
+            text-align: left;
+            width: 180px;
+        }
+        th.col-classificacao {
+            text-align: left;
+        }
+        .txt-bold {
+            font-weight: bold;
+            color: #000;
+        }
+        .bg-cinza {
+            background-color: #f8f9fa;
+        }
+        
+        /* Alinhamento do conteúdo na célula */
+        .classificacao-celula {
+            display: flex;
+            align-items: center;
+        }
+        
+        .time-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .time-link:hover {
+            color: #06c;
+        }
+        .time-link img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            object-fit: contain;
+        }
+        .posicao-num {
+            display: inline-block;
+            width: 18px;
+            font-weight: bold;
+        }
+        
+        /* Nova posição e estilo das setas */
+        .seta {
+            font-size: 10px;
+            width: 15px;
+            margin-right: 8px;
+            text-align: center;
+            display: inline-block;
+        }
+        .seta-subiu { color: #2ecc71; }
+        .seta-desceu { color: #e74c3c; }
+        .seta-manteve { color: #bdc3c7; }
+
+        /* Bordas laterais de indicação de zona */
+        .zona-classificado { border-left: 3px solid #0056b3; }
+        .zona-rebaixado { border-left: 3px solid #ff0000; }
+        .posicao-num.verde { color: #0056b3; }
+        .posicao-num.vermelho { color: #ff0000; }
+
+        /* Estilo da Legenda */
+        .legenda-container {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed #e9ecef;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 11px;
+            color: #7f8c8d;
+        }
+        .legenda-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .quadrado-legenda {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+        }
+        .quadrado-azul { background-color: #0056b3; }
+        .quadrado-vermelho { background-color: #ff0000; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Painel do Campeonato</h1>
+
+    <!-- ================= 1ª FASE ================= -->
+    <div class="fase-container">
+        <div class="fase-titulo">1ª FASE DE GRUPOS</div>
+        <div class="grupos-grid">
+            
+            <!-- GRUPO A -->
+            <div>
+                <div class="grupo-titulo">GRUPO A</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col-classificacao">CLASSIFICAÇÃO</th>
+                            <th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="zona-classificado">
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num verde">1</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://i.postimg.cc/jj0FQPQS/1777684655215.png" alt="USC">CAI</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="zona-classificado">
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num verde">2</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://i.postimg.cc/hjwVKVrQ/CRUZEIRODS.png" alt="MAM">CDS</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="zona-classificado">
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num verde">3</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://i.postimg.cc/d1KKpxbp/MSC.png" alt="CAP">MSC</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num">4</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://i.postimg.cc/HLd2N0SS/CAE.png" alt="BOA">CAE</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num">5</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://i.postimg.cc/Jn9KPfSK/AFC.png" alt="CAL">AFC</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="zona-rebaixamento">
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num vermelho">6</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://i.postimg.cc/qMZqSp1d/UFC.png" alt="GUA">UFC</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- GRUPO B -->
+            <div>
+                <div class="grupo-titulo">GRUPO B</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col-classificacao">CLASSIFICAÇÃO</th>
+                            <th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="zona-classificado">
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num verde">1</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://i.postimg.cc/Y93YmJMF/VFC.png" alt="DSL">VFC</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="zona-classificado">
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num verde">2</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://i.postimg.cc/YSBWDpCT/FEC.jpg" alt="COI">FEC</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="zona-classificado">
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num verde">3</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://i.postimg.cc/bJ3Svk9Q/SCB.png" alt="AYM">SCB</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num">4</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://i.postimg.cc/rFtsBv3S/MEC.png" alt="VAL">MEC</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num">5</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://i.postimg.cc/pT6V7ZBZ/AMG.png" alt="VIL">AMG</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="zona-rebaixamento">
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num vermelho">6</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://i.postimg.cc/44YxcDJt/BSC.png" alt="IPA">BSC</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- LEGENDA DA FASE 1 -->
+        <div class="legenda-container">
+            <div class="legenda-item"><span class="quadrado-legenda quadrado-azul"></span> classificados</div>
+            <div class="legenda-item"><span class="quadrado-legenda quadrado-vermelho"></span> rebaixados</div>
+            <div class="legenda-item"><span class="seta seta-subiu">▲</span> subiu</div>
+            <div class="legenda-item"><span class="seta seta-desceu">▼</span> caiu</div>
+            <div class="legenda-item"><span class="seta seta-manteve">■</span> manteve</div>
+        </div>
+    </div>
+
+    <!-- ================= 2ª FASE ================= -->
+    <div class="fase-container">
+        <div class="fase-titulo">2ª FASE DE GRUPOS</div>
+        <div class="grupos-grid">
+            
+            <!-- GRUPO C -->
+            <div>
+                <div class="grupo-titulo">GRUPO C</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col-classificacao">CLASSIFICAÇÃO</th>
+                            <th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="zona-classificado">
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num verde">1</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://via.placeholder.com/20" alt="USC">SEM</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num">2</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://via.placeholder.com/20" alt="COI">SEM</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num">3</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://via.placeholder.com/20" alt="CAP">SEM</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- GRUPO D -->
+            <div>
+                <div class="grupo-titulo">GRUPO D</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col-classificacao">CLASSIFICAÇÃO</th>
+                            <th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="zona-classificado">
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num verde">1</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://via.placeholder.com/20" alt="DSL">SEM</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num">2</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://via.placeholder.com/20" alt="MAM">SEM</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td class="col-classificacao">
+                                <div class="classificacao-celula">
+                                    <span class="posicao-num">3</span>
+                                    <span class="seta seta-manteve">■</span>
+                                    <a href="#" class="time-link"><img src="https://via.placeholder.com/20" alt="AYM">SEM</a>
+                                </div>
+                            </td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- LEGENDA DA FASE 2 -->
+        <div class="legenda-container">
+            <div class="legenda-item"><span class="quadrado-legenda quadrado-azul"></span> finalistas</div>
+            <div class="legenda-item"><span class="seta seta-subiu">▲</span> subiu</div>
+            <div class="legenda-item"><span class="seta seta-desceu">▼</span> caiu</div>
+            <div class="legenda-item"><span class="seta seta-manteve">■</span> manteve</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
