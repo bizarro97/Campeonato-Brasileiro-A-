@@ -121,9 +121,12 @@
 
         /* Bordas laterais de indicação de zona */
         .zona-classificado { border-left: 3px solid #0056b3; }
-        .zona-rebaixado { border-left: 3px solid #ff0000; }
+        .zona-rebaixamento { border-left: 3px solid #ff0000; }
+        .zona-laranja { border-left: 3px solid #e67e22; }
+        
         .posicao-num.verde { color: #0056b3; }
         .posicao-num.vermelho { color: #ff0000; }
+        .posicao-num.laranja { color: #e67e22; }
 
         /* Estilo da Legenda */
         .legenda-container {
@@ -148,6 +151,7 @@
         }
         .quadrado-azul { background-color: #0056b3; }
         .quadrado-vermelho { background-color: #ff0000; }
+        .quadrado-laranja { background-color: #e67e22; }
     </style>
 </head>
 <body>
@@ -161,7 +165,7 @@
         <div class="fase-titulo">1ª FASE DE GRUPOS</div>
         <div class="grupos-grid">
             
-            <!-- GRUPO A -->
+            <!-- GRUPO A (RESULTADOS ANTIGOS RESTAURADOS) -->
             <div>
                 <div class="grupo-titulo">GRUPO A</div>
                 <table>
@@ -347,7 +351,7 @@
                                     <a href="#" class="time-link"><img src="https://i.postimg.cc/Sxz7b9XV/CAI3.png" alt="CAI">CAI</a>
                                 </div>
                             </td>
-                            <td class="txt-bold bg-cinza">12</td><td>4</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                         </tr>
                         <tr>
                             <td class="col-classificacao">
@@ -357,7 +361,7 @@
                                     <a href="#" class="time-link"><img src="https://i.postimg.cc/ZKW66NL0/MSC.png" alt="MSC">MSC</a>
                                 </div>
                             </td>
-                            <td class="txt-bold bg-cinza">0</td><td>2</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                         </tr>
                         <tr>
                             <td class="col-classificacao">
@@ -367,7 +371,7 @@
                                     <a href="#" class="time-link"><img src="https://i.postimg.cc/QCw9f6qb/AFC3.png" alt="AFC">AFC</a>
                                 </div>
                             </td>
-                            <td class="txt-bold bg-cinza">0</td><td>2</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                         </tr>
                     </tbody>
                 </table>
@@ -392,7 +396,7 @@
                                     <a href="#" class="time-link"><img src="https://i.postimg.cc/QtPpHgyF/VFC3.png" alt="VFC">VFC</a>
                                 </div>
                             </td>
-                            <td class="txt-bold bg-cinza">12</td><td>4</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                         </tr>
                         <tr>
                             <td class="col-classificacao">
@@ -402,7 +406,7 @@
                                     <a href="#" class="time-link"><img src="https://i.postimg.cc/qB3K13YH/CFC3.png" alt="CFC">CFC</a>
                                 </div>
                             </td>
-                            <td class="txt-bold bg-cinza">0</td><td>2</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                         </tr>
                         <tr>
                             <td class="col-classificacao">
@@ -412,7 +416,7 @@
                                     <a href="#" class="time-link"><img src="https://i.postimg.cc/ZqQ9cbxS/BOL3.png" alt="BOL">BOL</a>
                                 </div>
                             </td>
-                            <td class="txt-bold bg-cinza">0</td><td>2</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td>
+                            <td class="txt-bold bg-cinza">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                         </tr>
                     </tbody>
                 </table>
@@ -426,6 +430,52 @@
             <div class="legenda-item"><span class="seta seta-subiu">▲</span> subiu</div>
             <div class="legenda-item"><span class="seta seta-desceu">▼</span> caiu</div>
             <div class="legenda-item"><span class="seta seta-manteve">■</span> manteve</div>
+        </div>
+    </div>
+
+    <!-- ================= GRUPO E (ZONA DE REBAIXAMENTO) ================= -->
+    <div class="fase-container">
+        <div class="fase-titulo">DISPUTA CONTRA O REBAIXAMENTO</div>
+        <div style="max-width: 550px; margin: 0 auto;">
+            <div class="grupo-titulo">GRUPO E</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col-classificacao">CLASSIFICAÇÃO</th>
+                        <th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 1º colocado: Fica normal (se salva) -->
+                    <tr>
+                        <td class="col-classificacao">
+                            <div class="classificacao-celula">
+                                <span class="posicao-num">1</span>
+                                <span class="seta seta-manteve">■</span>
+                                <a href="#" class="time-link"><img src="https://i.postimg.cc/V6NJmyGw/AEC3.png" alt="AEC">AEC</a>
+                            </div>
+                        </td>
+                        <td class="txt-bold bg-cinza">6</td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <!-- 2º colocado: Zona Laranja (cai no rebaixamento) -->
+                    <tr class="zona-laranja">
+                        <td class="col-classificacao">
+                            <div class="classificacao-celula">
+                                <span class="posicao-num laranja">2</span>
+                                <span class="seta seta-manteve">■</span>
+                                <a href="#" class="time-link"><img src="https://i.postimg.cc/zDKLC1LP/BAZ.png" alt="BAZ">BAZ</a>
+                            </div>
+                        </td>
+                        <td class="txt-bold bg-cinza">0</td><td>2</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- LEGENDA COMPLETA DO GRUPO E -->
+            <div class="legenda-container">
+                <div class="legenda-item"><span class="quadrado-legenda quadrado-laranja"></span> zona laranja (rebaixado)</div>
+                <div class="legenda-item"><span class="seta seta-manteve">■</span> manteve</div>
+            </div>
         </div>
     </div>
 
